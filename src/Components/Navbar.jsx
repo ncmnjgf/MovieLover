@@ -4,7 +4,7 @@ const Navbar = () => {
   return (
   <nav className='navbar'>
     <h1>MovieLover</h1>
-    <div class="navbar_links">
+    <div className="navbar_links">
         <a href=''>Popular🔥</a>
         <a href=''>TopRated⭐</a>
         <a href=''>Upcoming🥳</a>
