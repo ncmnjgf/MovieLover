@@ -40,7 +40,7 @@
 }
 .movie_details_heading{
     font-size: 16px;
-    color: #ffe400;
+    color: (--heading-color);
 }
 .movie_date_rate{
     justify-content: space-between;

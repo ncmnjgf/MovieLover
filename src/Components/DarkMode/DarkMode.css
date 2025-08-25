@@ -1,0 +1,82 @@
+.dark_mode {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+
+/* Hide checkbox */
+.dark_mode_input {
+  display: none;
+}
+
+/* Toggle container */
+.dark_mode_label {
+  width: 70px;
+  height: 34px;
+  background: #e0e0e0;
+  border-radius: 50px;
+  position: relative;
+  cursor: pointer;
+  box-shadow: inset 2px 2px 6px rgba(0,0,0,0.2),
+              inset -2px -2px 6px rgba(255,255,255,0.6);
+  transition: background 0.3s ease;
+}
+
+/* Slider circle */
+.dark_mode_label::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 26px;
+  height: 26px;
+  background: linear-gradient(145deg, #f9d423, #ff4e50);
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(255, 204, 0, 0.7); /* glow effect for sun */
+  transition: all 0.3s ease;
+}
+
+/* Dark mode */
+.dark_mode_input:checked + .dark_mode_label {
+  background: #1e1e1e;
+  box-shadow: inset 2px 2px 6px rgba(255,255,255,0.1),
+              inset -2px -2px 6px rgba(0,0,0,0.6);
+}
+
+.dark_mode_input:checked + .dark_mode_label::after {
+  left: 40px;
+  background: linear-gradient(145deg, #eee9e9, #454242);
+  box-shadow: 0 0 10px rgba(0, 180, 255, 0.8); /* glow effect for moon */
+}
+
+/* Icons */
+.dark_mode_label img {
+  position: absolute;
+  width: 20px;
+  top: 7px;
+  transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+.sun {
+  left: 10px;
+  opacity: 1;
+  filter: drop-shadow(0 0 6px rgba(255, 200, 0, 0.8)); /* glow in light mode */
+}
+
+.moon {
+  right: 10px;
+  opacity: 0.4;
+  filter: none;
+}
+
+/* Switch icon visibility & glow */
+.dark_mode_input:checked + .dark_mode_label .sun {
+  opacity: 0.4;
+  filter: none;
+}
+
+.dark_mode_input:checked + .dark_mode_label .moon {
+  opacity: 1;
+  filter: drop-shadow(0 0 6px rgba(225, 231, 234, 0.9)); /* moon glows in dark mode */
+}

@@ -8,7 +8,9 @@ function App() {
   return (
     <div className='app'>
       <Navbar/>
-    <MovieLists/>
+    <MovieLists type="popular" title = "Popular🔥"/>
+    <MovieLists type="top_rated" title = "Top Rated⭐"/>
+    <MovieLists type="upcoming" title = "Upcoming🥳"/>
     </div>
 
   )
